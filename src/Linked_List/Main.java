@@ -8,6 +8,9 @@ public class Main {
         myLinkedList.append(2);
         myLinkedList.append(3);
 
+        // Remove Last Node
+        System.out.println(myLinkedList.removeLast().value + " with node Removed");
+
         // Test LinkedList Working
         myLinkedList.getHead();
         myLinkedList.getTail();
