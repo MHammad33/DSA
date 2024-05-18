@@ -16,6 +16,20 @@ public class LinkedList {
     }
 
     /*
+     * @dev Adds Node at end
+     * */
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (head == null) {
+            head = newNode;
+        } else {
+            tail.next = newNode;
+        }
+        tail = newNode;
+        length++;
+    }
+
+    /*
      * @dev Print the values of Linked List
      */
     public void printList() {
