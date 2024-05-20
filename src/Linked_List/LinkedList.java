@@ -97,6 +97,21 @@ public class LinkedList {
     }
 
     /*
+     * @dev Get the Node at specific index
+     * */
+    public Node get(int index) {
+        if (head == null) {
+            return null;
+        }
+
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    /*
      * @dev Print the values of Linked List
      */
     public void printList() {
