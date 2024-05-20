@@ -73,6 +73,30 @@ public class LinkedList {
     }
 
     /*
+     * @dev Removes the first Node
+     * */
+    public Node removeFirst() {
+        if (head == null) {
+            System.out.println("Linked List is already empty. Cannot be deleted.");
+            return null;
+        }
+
+        Node temp = head;
+
+        if (head.next == null) {
+            head = null;
+            tail = null;
+            length--;
+            return temp;
+        }
+
+        head = head.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
+    /*
      * @dev Print the values of Linked List
      */
     public void printList() {
