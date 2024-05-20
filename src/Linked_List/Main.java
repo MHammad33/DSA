@@ -11,6 +11,9 @@ public class Main {
         // Remove Last Node
         System.out.println(myLinkedList.removeLast().value + " with node Removed");
 
+        // Prepend Node
+        myLinkedList.prepend(100);
+
         // Test LinkedList Working
         myLinkedList.getHead();
         myLinkedList.getTail();
