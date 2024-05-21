@@ -124,6 +124,35 @@ public class LinkedList {
     }
 
     /*
+     * @dev Adds Node at Specific index
+     * */
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) {
+            return false;
+        }
+
+        // Adds node at start
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+
+        // Adds node at end
+        if (index == length) {
+            append(value);
+            return true;
+        }
+
+        // Adds node in middle
+        Node newNode = new Node(value);
+        Node temp = get(index - 1);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length++;
+        return true;
+    }
+
+    /*
      * @dev Print the values of Linked List
      */
     public void printList() {
