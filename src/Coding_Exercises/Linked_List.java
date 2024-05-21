@@ -4,7 +4,13 @@ public class Linked_List {
     private Node head;
     private Node tail;
     private int length;
-    
+
+    public Linked_List(int value) {
+        Node newNode = new Node(value);
+        head = newNode;
+        tail = newNode;
+        length++;
+    }
 
     public Node getHead() {
         return head;
@@ -24,7 +30,7 @@ public class Linked_List {
             System.out.print(temp.value + " => ");
             temp = temp.next;
         }
-        System.out.println();
+        System.out.println("null");
     }
 
     public void printAll() {
@@ -36,7 +42,7 @@ public class Linked_List {
             System.out.println("Tail: " + tail.value);
         }
         System.out.println("Length: " + length);
-        System.out.println("\nLinked List: ");
+        System.out.print("\nLinked List: ");
         if (length == 0) {
             System.out.println("Empty");
         } else {
