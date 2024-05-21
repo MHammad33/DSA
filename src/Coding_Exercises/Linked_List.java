@@ -5,9 +5,22 @@ public class Linked_List {
     private Node tail;
     private int length;
 
+    // Exercise 2 -- Constructor
     public Linked_List(int value) {
         Node newNode = new Node(value);
         head = newNode;
+        tail = newNode;
+        length++;
+    }
+
+    // Exercise 3 -- Append
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (head == null) {
+            head = newNode;
+        } else {
+            tail.next = newNode;
+        }
         tail = newNode;
         length++;
     }
