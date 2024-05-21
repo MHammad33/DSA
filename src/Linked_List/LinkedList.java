@@ -173,6 +173,26 @@ public class LinkedList {
     }
 
     /*
+     * @dev Reverses Array
+     * */
+    public void reverse() {
+        // Reverse Head and Tail Pointers
+        Node temp = head;
+        head = tail;
+        tail = temp;
+
+        // Reverse List
+        Node before = null;
+        Node after;
+        for (int i = 0; i < length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+    }
+
+    /*
      * @dev Print the values of Linked List
      */
     public void printList() {

@@ -2,13 +2,13 @@ package Linked_List;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(11);
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.append(2);
         myLinkedList.append(3);
-        myLinkedList.append(23);
-        myLinkedList.append(7);
+        myLinkedList.append(4);
 
-        // Remove Node at index 2 (23)
-        myLinkedList.remove(2);
+        // Reverse LinkedList
+        myLinkedList.reverse();
 
         // Test LinkedList Working
         myLinkedList.getHead();
