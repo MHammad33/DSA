@@ -25,6 +25,29 @@ public class Linked_List {
         length++;
     }
 
+    // Exercise 4 -- Remove Last
+    public Node removeLast() {
+        if (head == null) return null;
+
+        Node temp = head;
+        if (head.next == null) {
+            head = null;
+            tail = null;
+            length--;
+            return temp;
+        }
+
+        Node prev = head;
+        while (temp.next != null) {
+            prev = temp;
+            temp = temp.next;
+        }
+        prev.next = null;
+        tail = prev;
+        length--;
+        return temp;
+    }
+
     public Node getHead() {
         return head;
     }
@@ -64,8 +87,8 @@ public class Linked_List {
     }
 
     class Node {
-        private int value;
-        private Node next;
+        int value;
+        Node next;
 
         Node(int value) {
             this.value = value;
