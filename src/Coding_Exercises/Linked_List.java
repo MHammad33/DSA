@@ -130,6 +130,23 @@ public class Linked_List {
         return true;
     }
 
+    // Exercise 10 -- Remove
+    public Node remove(int index) {
+        if (index < 0 || index > length) return null;
+
+        // At Start and end
+        if (index == 0) return removeFirst();
+        if (index == length) return removeLast();
+
+        // At middle
+        Node prev = get(index - 1);
+        Node temp = prev.next;
+        prev.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
     public Node getHead() {
         return head;
     }
