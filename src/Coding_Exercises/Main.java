@@ -2,18 +2,26 @@ package Coding_Exercises;
 
 public class Main {
     public static void main(String[] args) {
-        // Exercise 8 -- Set
-        Linked_List myLinkedList = new Linked_List(0);
-        myLinkedList.append(1);
-        myLinkedList.append(2);
+        // Exercise 9 -- Insert
+        Linked_List myLinkedList = new Linked_List(1);
         myLinkedList.append(3);
 
-        System.out.println("Linked List before set():");
+        System.out.println("LL before insert():");
         myLinkedList.printList();
 
-        myLinkedList.set(2, 99);
+        myLinkedList.insert(1, 2);
 
-        System.out.println("\nLinked List after set():");
+        System.out.println("\nLL after insert(2) in middle:");
+        myLinkedList.printList();
+
+        myLinkedList.insert(0, 0);
+
+        System.out.println("\nLL after insert(0) at beginning:");
+        myLinkedList.printList();
+
+        myLinkedList.insert(4, 4);
+
+        System.out.println("\nLL after insert(4) at end:");
         myLinkedList.printList();
 
         // Test Linked List
@@ -70,6 +78,20 @@ public class Main {
 //
 //
 //        System.out.println(myLinkedList.get(3).value); // 3
+
+        // Exercise 8 -- Set
+//        Linked_List myLinkedList = new Linked_List(0);
+//        myLinkedList.append(1);
+//        myLinkedList.append(2);
+//        myLinkedList.append(3);
+//
+//        System.out.println("Linked List before set():");
+//        myLinkedList.printList();
+//
+//        myLinkedList.set(2, 99);
+//
+//        System.out.println("\nLinked List after set():");
+//        myLinkedList.printList();
 
     }
 }

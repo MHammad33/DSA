@@ -103,6 +103,33 @@ public class Linked_List {
         return false;
     }
 
+    // Exercise 9 -- Insert
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) {
+            return false;
+        }
+
+        // At start
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+
+        // At end
+        if (index == length) {
+            append(value);
+            return true;
+        }
+
+        // At middle
+        Node newNode = new Node(value);
+        Node temp = get(index - 1);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length++;
+        return true;
+    }
+
     public Node getHead() {
         return head;
     }
