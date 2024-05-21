@@ -48,6 +48,19 @@ public class Linked_List {
         return temp;
     }
 
+    // Exercise 5 -- Prepend
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
+
     public Node getHead() {
         return head;
     }
