@@ -2,11 +2,13 @@ package Linked_List;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(0);
-        myLinkedList.append(2);
+        LinkedList myLinkedList = new LinkedList(11);
+        myLinkedList.append(3);
+        myLinkedList.append(23);
+        myLinkedList.append(7);
 
-        // Add Node at index 1
-        myLinkedList.insert(1, 1);
+        // Remove Node at index 2 (23)
+        myLinkedList.remove(2);
 
         // Test LinkedList Working
         myLinkedList.getHead();
@@ -33,6 +35,9 @@ public class Main {
 
         // Set Node at index 3
         System.out.println(myLinkedList.set(3, 100));
+
+        // Add Node at index 1
+        myLinkedList.insert(1, 1);
         * */
 
     }

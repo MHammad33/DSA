@@ -153,6 +153,26 @@ public class LinkedList {
     }
 
     /*
+     * @dev Remove the node at Specific index
+     * */
+    public Node remove(int index) {
+        if (index < 0 || index >= length) return null;
+
+        // Removes node at 0 and n indexes
+        if (index == 0) return removeFirst();
+        if (index == length - 1) return removeLast();
+
+        // Removes node in middle indexes
+        Node prev = get(index - 1);
+        Node temp = prev.next;
+        prev.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+
+    }
+
+    /*
      * @dev Print the values of Linked List
      */
     public void printList() {
