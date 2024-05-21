@@ -61,6 +61,27 @@ public class Linked_List {
         length++;
     }
 
+    // Exercise 6 -- Remove First
+    public Node removeFirst() {
+        if (head == null) return null;
+
+        Node temp = head;
+        // If there is only one node
+        if (head.next == null) {
+            head = null;
+            tail = null;
+            length--;
+            return temp;
+        }
+
+        // If there are multiple nodes
+        head = head.next;
+        temp.next = null;
+        length--;
+        return temp;
+
+    }
+
     public Node getHead() {
         return head;
     }
