@@ -2,15 +2,19 @@ package Coding_Exercises;
 
 public class Main {
     public static void main(String[] args) {
-        // Exercise 7 -- Get
+        // Exercise 8 -- Set
         Linked_List myLinkedList = new Linked_List(0);
         myLinkedList.append(1);
         myLinkedList.append(2);
         myLinkedList.append(3);
 
+        System.out.println("Linked List before set():");
+        myLinkedList.printList();
 
-        System.out.println(myLinkedList.get(3).value); // 3
+        myLinkedList.set(2, 99);
 
+        System.out.println("\nLinked List after set():");
+        myLinkedList.printList();
 
         // Test Linked List
         myLinkedList.printAll();
@@ -57,6 +61,15 @@ public class Main {
 //        System.out.println(myLinkedList.removeFirst().value);
 //        // (0) Items - Returns null
 //        System.out.println(myLinkedList.removeFirst());
+
+        // Exercise 7 -- Get
+//        Linked_List myLinkedList = new Linked_List(0);
+//        myLinkedList.append(1);
+//        myLinkedList.append(2);
+//        myLinkedList.append(3);
+//
+//
+//        System.out.println(myLinkedList.get(3).value); // 3
 
     }
 }
