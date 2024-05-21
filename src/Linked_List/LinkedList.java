@@ -100,7 +100,7 @@ public class LinkedList {
      * @dev Get the Node at specific index
      * */
     public Node get(int index) {
-        if (head == null) {
+        if (index < 0 || index >= length) {
             return null;
         }
 
@@ -109,6 +109,18 @@ public class LinkedList {
             temp = temp.next;
         }
         return temp;
+    }
+
+    /*
+     * @dev Set the Node value at specific index
+     * */
+    public boolean set(int index, int value) {
+        Node temp = get(index);
+        if (temp != null) {
+            temp.value = value;
+            return true;
+        }
+        return false;
     }
 
     /*
