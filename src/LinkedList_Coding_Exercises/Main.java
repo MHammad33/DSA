@@ -1,4 +1,4 @@
-package Coding_Exercises;
+package LinkedList_Coding_Exercises;
 
 public class Main {
     public static void main(String[] args) {
