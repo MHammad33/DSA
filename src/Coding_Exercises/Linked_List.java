@@ -147,6 +147,23 @@ public class Linked_List {
         return temp;
     }
 
+    // Exercise 11 -- Reverse
+    public void reverse() {
+        Node temp = head;
+        head = tail;
+        tail = temp;
+
+        Node before = null;
+        Node after;
+
+        for (int i = 0; i < length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+    }
+
     public Node getHead() {
         return head;
     }
